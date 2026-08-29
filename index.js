@@ -93,9 +93,9 @@ let ucetambolunenler = [];
   let enkucuk = sayilar[0];
   let enbuyuk = sayilar[0];
   let ucebolunenlerintoplami = [];
-  besyuzdenkucuksayilar,
-  siralisayilar,
-  tekraredensayilar;
+  let besyuzdenkucuksayilar = [];
+  let siralisayilar = [];
+  let tekraredensayilar = [];
 
 // 3a çözümü
 for (let i = 0; i < sayilar.length; i++) {
@@ -112,7 +112,7 @@ for (let i = 0; i < sayilar.length; i++) {
 // 3b çözümü:
 
 sayilar.forEach((sayi) => {
-  if (sayi 3 % 3 ===0) {
+  if (sayi % 3 ===0) {
     ucteambolunenler.push(sayi);
   }
 })
@@ -123,16 +123,28 @@ ucetambolunenlerintoplami = ucetambolunenler.reduce((toplam,sayi) => toplam + sa
 
 // 3d çözümü
 
-/* kodlar buraya */
+besyuzdenkucuksayilar = sayilar.filter((sayi) => sayi < 500);
 
 // 3e çözümü
 
-/* kodlar buraya */
+siralisayilar = besyuzdenkucuksayilar.sort((a,b) => a - b);
 
 // 3f çözümü
 
-/* kodlar buraya */
+for (let i = 0; i < sayilar.length; i++) {
+  let sayi = sayilar[i];
+  let tekrarSayisi = 0;
+  for (let j = 0; j < sayilar.length; j++) {
+    if (sayi === sayilar[j]) {
+      tekrarSayisi ++;
+    }
+  }
+  if ( tekrarSayisi > 1 && !tekraredensayilar.includes(`${sayi} sayisi ${tekrarSayisi} kere tekrar edilmiştir`)) {
+    tekraredensayilar.push(`${sayi} sayisi ${tekrarSayisi} kere tekrar edilmiştir`);
+  }
+}
 
+ 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
 function sa() {
