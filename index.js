@@ -92,7 +92,7 @@ console.log(CemberinAlani(15,pi));
 let ucetambolunenler,
   let enkucuk = sayilar[0],
   let enbuyuk = sayilar[0],
-  ucebolunenlerintoplami,
+  let ucebolunenlerintoplami = [],
   besyuzdenkucuksayilar,
   siralisayilar,
   tekraredensayilar;
@@ -107,11 +107,15 @@ for (let i = 0; i < sayilar.length; i++) {
   }
 }
 
-/* kodlar buraya */
+
 
 // 3b çözümü:
 
-/* kodlar buraya */
+sayilar.forEach((sayi) => {
+  if (sayi 3 % 3 ===0) {
+    ucteambolunenler.push(sayi);
+  }
+})
 
 // 3c çözümü:
 
