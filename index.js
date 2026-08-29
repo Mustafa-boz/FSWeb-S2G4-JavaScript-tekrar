@@ -89,10 +89,10 @@ console.log(CemberinAlani(15,pi));
 
 /*  (oto test yok) sayilar dizisi içinde kaç adet sayı olduğunu konsola yazdırın */
 
-let ucetambolunenler,
-  let enkucuk = sayilar[0],
-  let enbuyuk = sayilar[0],
-  let ucebolunenlerintoplami = [],
+let ucetambolunenler = [];
+  let enkucuk = sayilar[0];
+  let enbuyuk = sayilar[0];
+  let ucebolunenlerintoplami = [];
   besyuzdenkucuksayilar,
   siralisayilar,
   tekraredensayilar;
