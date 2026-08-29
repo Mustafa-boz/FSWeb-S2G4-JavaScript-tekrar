@@ -96,6 +96,9 @@ let ucetambolunenler = [];
   let besyuzdenkucuksayilar = [];
   let siralisayilar = [];
   let tekraredensayilar = [];
+  let ucetambolunenlerintoplami = 0;
+  let tekrarSayisi = 0;
+  
 
 // 3a çözümü
 for (let i = 0; i < sayilar.length; i++) {
@@ -112,8 +115,8 @@ for (let i = 0; i < sayilar.length; i++) {
 // 3b çözümü:
 
 sayilar.forEach((sayi) => {
-  if (sayi % 3 ===0) {
-    ucteambolunenler.push(sayi);
+  if (sayi % 3 === 0) {
+    ucetambolunenler.push(sayi);
   }
 })
 
@@ -139,8 +142,11 @@ for (let i = 0; i < sayilar.length; i++) {
       tekrarSayisi ++;
     }
   }
-  if ( tekrarSayisi > 1 && !tekraredensayilar.includes(`${sayi} sayisi ${tekrarSayisi} kere tekrar edilmiştir`)) {
-    tekraredensayilar.push(`${sayi} sayisi ${tekrarSayisi} kere tekrar edilmiştir`);
+  if (tekrarSayisi > 1) {
+    let tekrarString = `${sayi} sayisi ${tekrarSayisi} kere tekrar edilmiştir`;
+    if (!tekraredensayilar.includes(tekrarString)) {
+      tekraredensayilar.push(tekrarString);
+    }
   }
 }
 
